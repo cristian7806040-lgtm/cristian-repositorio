@@ -2,6 +2,8 @@ import { Composition, Folder } from "remotion";
 import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
+import { Video } from "./Video";
+import { DURACION_TOTAL } from "./data/escenas";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -34,6 +36,14 @@ export const RemotionRoot: React.FC = () => {
           }}
         />
       </Folder>
+      <Composition
+        id="Video"
+        component={Video}
+        durationInFrames={DURACION_TOTAL}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         // You can take the "id" to render a video:
         // bunx remotion render HelloWorld
