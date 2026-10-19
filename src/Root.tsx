@@ -3,6 +3,7 @@ import { HelloWorld } from "./HelloWorld";
 import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
 import { Video } from "./Video";
+import { Transformacion } from "./Transformacion";
 import { DURACION_TOTAL } from "./data/escenas";
 
 // Each <Composition> is an entry in the sidebar!
@@ -36,6 +37,24 @@ export const RemotionRoot: React.FC = () => {
           }}
         />
       </Folder>
+      <Composition
+        id="Transformacion"
+        component={Transformacion}
+        durationInFrames={150}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          antes: "img/antes.jpg",
+          despues: "img/despues.jpg",
+          origen: { x: 0.45, y: 0.45 },
+          inicio: 15,
+          duracion: 75,
+          colorBorde: "#FF6B5A",
+          ruido: 120,
+          fibras: 40,
+        }}
+      />
       <Composition
         id="Video"
         component={Video}
